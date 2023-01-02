@@ -21,7 +21,7 @@
         >
           <%= overduetodos[i].title %>
         </label>
-        <a href="#" class="hidden trash-icon ml-2">
+        <a href="#" class="hidden trash-icon ml-2" onclick="deleteTodo(<%= overduetodos[i].id %>)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -64,7 +64,7 @@
         >
           <%= duetodaytodos[i].title %>
         </label>
-        <a href="#" class="hidden trash-icon ml-2">
+        <a href="#" class="hidden trash-icon ml-2" onclick="deleteTodo(<%= duetodaytodos[i].id %>)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -107,7 +107,7 @@
         >
           <%= duelatertodos[i].title %>
         </label>
-        <a href="#" class="hidden trash-icon ml-2">
+        <a href="#" class="hidden trash-icon ml-2" onclick="deleteTodo(<%= duelatertodos[i].id %>)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
