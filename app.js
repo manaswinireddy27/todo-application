@@ -21,8 +21,6 @@ const flash = require("connect-flash");
 
 const saltRounds = 10;
 
-const { error } = require("console");
-const { next } = require("cheerio/lib/api/traversing");
 app.set("view engine", "ejs");
 
 app.set("views", path.join(__dirname, "views"));
