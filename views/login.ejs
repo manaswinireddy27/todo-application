@@ -16,6 +16,13 @@
         <div class="col-start-3 col-span-2">
             <%- include('header.ejs') %>
             <h6 class="py-4">Login to your account</h6>
+            <div>
+                <% if (messages && messages.error && messages.error.length > 0) { %>
+                    <% for(var i=0; i<messages.error.length; i++) { %>
+                        <p class="bg-red-100 my-3 list-none rounded px-4 py-2"><%= messages.error[i] %></p>
+                    <% } %>
+                <% } %>
+            </div>
             <form action="/session" method="post">
                 <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="py-4">

@@ -1,6 +1,6 @@
 body {
   color: black;
-  font-family: "Courier New", Courier, monospace;
+  font-family: sans-serif;
 }
 
 .Todo-Item:hover .trash-icon {
