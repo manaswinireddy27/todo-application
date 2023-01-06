@@ -103,11 +103,6 @@ app.post("/users", async (request, response) => {
     request.flash("error", "Please enter your password");
     return response.redirect("/signup");
   }
-  let pass = request.body.password;
-  if (pass < 8) {
-    request.flash("error", "Password length should be atleast 8");
-    return response.redirect("/signup");
-  }
 
   const hashedPwd = await bcrypt.hash(request.body.password, saltRounds);
   console.log(hashedPwd);
