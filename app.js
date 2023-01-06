@@ -233,7 +233,7 @@ app.post(
       request.flash("error", "Title should not be empty");
       return response.redirect("/todos");
     }
-    if (request.body.title.length <= 5) {
+    if (request.body.title.length < 5) {
       request.flash("error", "Title length should be atleast 5");
       return response.redirect("/todos");
     }
