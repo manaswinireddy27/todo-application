@@ -204,19 +204,20 @@ app.get(
 //   }
 // });
 
-app.get(
-  "/todos/:id",
-  connectEnsureLogin.ensureLoggedIn(),
-  async function (request, response) {
-    try {
-      const todo = await Todo.findByPk(request.params.id);
-      return response.json(todo);
-    } catch (error) {
-      console.log(error);
-      return response.status(422).json(error);
-    }
-  }
-);
+// app.get(
+//   "/todos/:id",
+//   connectEnsureLogin.ensureLoggedIn(),
+//   async function (request, response) {
+//     try {
+//       const todo = await Todo.findByPk(request.params.id);
+
+//       return response.json(todo);
+//     } catch (error) {
+//       console.log(error);
+//       return response.status(422).json(error);
+//     }
+//   }
+// );
 
 app.post(
   "/todos",
