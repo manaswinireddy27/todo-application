@@ -143,13 +143,13 @@ app.get("/signout", (request, response, next) => {
 });
 
 app.get("/", async (request, response) => {
-  if (request.user === false) {
+  if (request.user) {
+    return response.redirect("/todos");
+  } else {
     response.render("index", {
-      title: "Todo application",
+      title: "Todo Application",
       csrfToken: request.csrfToken(),
     });
-  } else {
-    response.redirect("/todos");
   }
 });
 
