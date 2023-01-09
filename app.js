@@ -117,7 +117,6 @@ app.post("/users", async (request, response) => {
     request.login(user, (err) => {
       if (err) {
         console.log(err);
-        response.redirect("/todos");
       } else {
         response.redirect("/todos");
       }
