@@ -32,8 +32,8 @@ app.use(
     cookie: {
       maxAge: 24 * 60 * 60 * 1000, //24 hrs
     },
-    resave: true,
-    saveUninitialized: true,
+    //resave: true,
+    //saveUninitialized: true,
   })
 );
 app.use(function (request, response, next) {
